@@ -1,0 +1,6 @@
+speech-to-text-pipeline/audio/*
+speech-to-text-pipeline/transcripts/*
+
+# keep the directory placeholders
+!speech-to-text-pipeline/audio/.gitkeep
+!speech-to-text-pipeline/transcripts/.gitkeep
