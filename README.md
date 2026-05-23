@@ -65,9 +65,9 @@ Each line in a transcript represents a single spoken segment and follows this fo
 
 For example:
 ```
-[0.00-3.40] So the first thing I want to talk about is childhood curiosity.
-[3.40-7.82] I remember being completely fascinated by how things worked.
-[7.82-11.05] I would take apart everything I could get my hands on.
+[0.00-3.40] So the first thing I want to talk about is how my day went. 
+[3.40-7.82] I remember starting the day off fine. Things weren't too bad.
+[7.82-11.05] I was able to do my morning routine like going to the gym or watering my plants.
 ```
 
 Timestamps are in seconds. Segments are generated automatically by Whisper based on natural speech pauses, so segment length will vary.
