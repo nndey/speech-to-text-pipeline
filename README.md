@@ -1,6 +1,6 @@
 # DIY Speech-to-Text Pipeline
 
-A local, offline speech-to-text pipeline that batch-transcribes audio recordings using [faster-whisper](https://github.com/SYSTRAN/faster-whisper). Audio files in any format are automatically normalized via ffmpeg and transcribed in parallel, producing timestamped `.txt` transcripts — no cloud APIs, no data leaving the machine.
+A local, offline speech-to-text pipeline that batch-transcribes audio and video recordings using [faster-whisper](https://github.com/SYSTRAN/faster-whisper). Audio and video files in any format are automatically normalized via ffmpeg and transcribed in parallel, producing timestamped `.txt` transcripts — no cloud APIs, no data leaving the machine.
 
 ## Project Highlights
 - Fully local and offline — transcription runs entirely on-device via faster-whisper with no cloud dependencies
@@ -11,7 +11,7 @@ A local, offline speech-to-text pipeline that batch-transcribes audio recordings
 
 ## Tools and Technologies
 - **[faster-whisper](https://github.com/SYSTRAN/faster-whisper)** — CTranslate2-based reimplementation of OpenAI Whisper; runs on CPU with `int8` quantization for efficient local inference
-- **ffmpeg / ffprobe** — handles audio probing and conversion to the 16kHz mono WAV format required by Whisper
+- **ffmpeg / ffprobe** — handles audio/video probing and conversion to the 16kHz mono WAV format required by Whisper; audio is extracted automatically from video files
 - **Python** (`concurrent.futures.ThreadPoolExecutor`) — drives the transcription logic and parallelizes file processing across a configurable worker pool
 - **Bash** — outer script that wires the pipeline together and embeds the Python transcription logic inline
 
