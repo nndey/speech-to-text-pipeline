@@ -94,7 +94,11 @@ def transcribe_file(file):
 
     print(f"Done: {file.name}")
 
-files = [f for f in input_dir.iterdir() if f.is_file()]
+AUDIO_EXTENSIONS = {".wav", ".mp3", ".ogg", ".flac", ".aac", ".m4a", ".opus", ".wma"}
+VIDEO_EXTENSIONS = {".mp4", ".mkv", ".mov", ".avi", ".webm", ".m4v", ".ts", ".wmv"}
+SUPPORTED_EXTENSIONS = AUDIO_EXTENSIONS | VIDEO_EXTENSIONS
+
+files = [f for f in input_dir.iterdir() if f.is_file() and f.suffix.lower() in SUPPORTED_EXTENSIONS]
 
 with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
     executor.map(transcribe_file, files)
