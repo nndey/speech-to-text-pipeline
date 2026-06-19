@@ -1,3 +1,4 @@
 # keep the directory placeholders
 !speech-to-text-pipeline/audio/.gitkeep
 !speech-to-text-pipeline/transcripts/.gitkeep
+!speech-to-text-pipeline/tmp/.gitkeep
